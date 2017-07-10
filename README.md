@@ -6,7 +6,7 @@
 
 ### 申购可外墙的服务器主机
 
-主机我选择<a href="https://manage.host1plus.com">Host 1 Plus</a>，注册、选择购买Service套餐，支付后系统会分配主机IP和账号密码
+主机我选择<a target="_blank" href="https://manage.host1plus.com">Host 1 Plus</a>，注册、选择购买Service套餐，支付后系统会分配主机IP和账号密码
 
 ### 安装Linux
 
@@ -25,7 +25,7 @@
 
 如果发现安装Python会报一下错误，形如“No package python-pip available.Error: Nothing to do”，说没有python-pip软件包可以安装。这是因为像centos这类衍生出来的发行版，他们的源有时候内容更新的比较滞后，或者说有时候一些扩展的源根本就没有。
 所以在使用yum来search  python-pip的时候，会说没有找到该软件包。因此为了能够安装这些包，需要先安装扩展源EPEL。
-EPEL(<a href="http://fedoraproject.org/wiki/EPEL">http://fedoraproject.org/wiki/EPEL</a>) 是由 Fedora 社区打造，为 RHEL 及衍生发行版如 CentOS、Scientific Linux 等提供高质量软件包的项目。
+EPEL(<a target="_blank" href="http://fedoraproject.org/wiki/EPEL">http://fedoraproject.org/wiki/EPEL</a>) 是由 Fedora 社区打造，为 RHEL 及衍生发行版如 CentOS、Scientific Linux 等提供高质量软件包的项目。
 
 首先安装epel扩展源：
 >sudo yum -y install epel-release
@@ -103,4 +103,4 @@ workers---------number of workers, available on Unix/Linux（这个只在Unix和
 
 ### For Windows
 
-下载客户端工具<a href="https://github.com/shadowsocks/shadowsocks-windows">Shadowsocks工具</a>，对应Shadowsocks服务的配置信息，即可连接。
+下载客户端工具<a target="_blank" href="https://github.com/shadowsocks/shadowsocks-windows">Shadowsocks工具</a>，对应Shadowsocks服务的配置信息，即可连接。
