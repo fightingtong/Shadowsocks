@@ -47,32 +47,40 @@ sudo yum clean all
 >vim /etc/shadowsocks.json
 
 这时候vim打开了一个编辑文本，输入内容如下：
-{
-    "server": "0.0.0.0",
-    "local_address": "127.0.0.1",
-    "local_port":1080,
-    "port_password": {
-    	"8000": "password",
-    	"9000": "password"
-	},
-    "timeout":300,
-    "method":"rc4-md5",
-    "fast_open": false,
-    "workers": 1
-}
+    {
+        "server": "0.0.0.0",
+        "local_address": "127.0.0.1",
+        "local_port":1080,
+        "port_password": {
+        	"8000": "password",
+        	"9000": "password"
+    	},
+        "timeout":300,
+        "method":"rc4-md5",
+        "fast_open": false,
+        "workers": 1
+    }
 
 然后保存，至此shadowsocks配置已完成。
 
 ####配置的说明：
 
 Name            Explanation
+
 server	        the address your server listens（服务器IP）
+
 local_address	the address your local listens（本地代理地址）
+
 local_port	    local port（本地代理端口）
+
 port_password	password used for encryption(自己设定的服务器端口和密码)
+
 timeout	        in seconds（超时断开，以秒为单位）
+
 method	        default: "aes-256-cfb", see Encryption（加密方式）
+
 fast_open	    use TCP_FASTOPEN, true / false（是否使用TCP）
+
 workers	        number of workers, available on Unix/Linux（这个只在Unix和Linux下有用，可不设置）
 
 ### 启动Shadowsocks
