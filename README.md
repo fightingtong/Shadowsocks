@@ -65,23 +65,23 @@ sudo yum clean all
 
 ####配置的说明：
 
-Name            Explanation
+Name------------Explanation
 
-server	        the address your server listens（服务器IP）
+server----------the address your server listens（服务器IP）
 
-local_address	the address your local listens（本地代理地址）
+local_address---the address your local listens（本地代理地址）
 
-local_port	    local port（本地代理端口）
+local_port------local port（本地代理端口）
 
-port_password	password used for encryption(自己设定的服务器端口和密码)
+port_password---password used for encryption(自己设定的服务器端口和密码)
 
-timeout	        in seconds（超时断开，以秒为单位）
+timeout---------in seconds（超时断开，以秒为单位）
 
-method	        default: "aes-256-cfb", see Encryption（加密方式）
+method----------default: "aes-256-cfb", see Encryption（加密方式）
 
-fast_open	    use TCP_FASTOPEN, true / false（是否使用TCP）
+fast_open-------use TCP_FASTOPEN, true / false（是否使用TCP）
 
-workers	        number of workers, available on Unix/Linux（这个只在Unix和Linux下有用，可不设置）
+workers---------number of workers, available on Unix/Linux（这个只在Unix和Linux下有用，可不设置）
 
 ### 启动Shadowsocks
 
