@@ -47,6 +47,7 @@ sudo yum clean all
 >vim /etc/shadowsocks.json
 
 这时候vim打开了一个编辑文本，输入内容如下：
+
     {
         "server": "0.0.0.0",
         "local_address": "127.0.0.1",
