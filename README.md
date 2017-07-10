@@ -34,7 +34,7 @@ EPEL(<a target="_blank" href="http://fedoraproject.org/wiki/EPEL">http://fedorap
 >sudo yum install python-pip
 
 安装完之后别忘了清除一下cache:
-sudo yum clean all
+>sudo yum clean all
 
 ### 安装Shadowsocks
 
@@ -87,6 +87,17 @@ workers---------number of workers, available on Unix/Linux（这个只在Unix和
 ### 启动Shadowsocks
 
 >ssserver -c /etc/shadowsocks.json -d start
+
+#### 非root用户运行ss
+
+按照上面的设置shadowsocks是以root权限运行的，不是很安全，可以这样设置。
+
+>sudo useradd ssuser //添加一个ssuser用户
+>sudo ssserver [other options] --user ssuser //用ssuser这个用户来运行ss
+
+其中的[other options]是只，之前启动ss的命令，比如ssserver -c /etc/shadowsocks.json -d start。这样就可以使用非root用户来运行ss了。
+
+然后修改开机启动项，将之前的ssserver -c /etc/shadowsocks.json -d start改为ssserver -c /etc/shadowsocks.json -d start --user ssuser，然后保存就OK了。
 
 ### 开放防火墙端口
 
