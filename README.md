@@ -99,6 +99,21 @@ workers---------number of workers, available on Unix/Linux（这个只在Unix和
 
 然后修改开机启动项，将之前的ssserver -c /etc/shadowsocks.json -d start改为ssserver -c /etc/shadowsocks.json -d start --user ssuser，然后保存就OK了。
 
+### 系统登录自启动Shadowsocks
+
+当系统重启后，上面手动启动Shadowsocks的方式，在重启后就无法连接了，与于是我们再系统登录后设置自启动。
+
+1、进入用户HOME目录,输入下面命令展示隐藏文件
+>ls -a
+
+2、打开.bash_profile文件
+>vim .bash_profile
+
+3、进入编辑文本后，在末尾追加如下内容后保存
+ssserver -c /etc/shadowsocks.json -d start
+
+4、关机重启登录后，Shadowsocks自启动。
+
 ### 开放防火墙端口
 
 根据前面shadowsocks.json里配置的端口来开放防火墙端口，此处开放8000-9000的端口:
